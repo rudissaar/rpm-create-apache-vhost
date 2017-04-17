@@ -15,9 +15,23 @@ if [[ ${#} != 1 ]]; then
   exit 1
 fi
 
-SERVER_ROOT='/etc/httpd'
-DOCUMENT_ROOT='/home/webroot'
-SUB_DOMAIN='murda'
+if [[ -n ${APACHE_SERVER_ROOT} ]]; then
+  SERVER_ROOT=${APACHE_SERVER_ROOT}
+else
+  SERVER_ROOT='/etc/httpd'
+fi
+
+if [[ -n ${APACHE_DOCUMENT_ROOT} ]]; then
+  DOCUMENT_ROOT=${APACHE_DOCUMENT_ROOT}
+else
+  DOCUMENT_ROOT='/var/www'
+fi
+
+if [[ -n ${APACHE_SUB_DOMAIN} ]]; then
+  SUB_DOMAIN=${APACHE_SUB_DOMAIN}
+else
+  SUB_DOMAIN=''
+fi
 
 VHOST_NAME=${1}
 VHOST_NUM=$(ls "${SERVER_ROOT}/sites-available"| sort | tail -1 | cut -d '-' -f1)
