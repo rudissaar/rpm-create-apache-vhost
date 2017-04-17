@@ -1,7 +1,17 @@
 #!/usr/bin/env bash
 
 if [[ ${#} != 1 ]]; then
-  echo '> Please specify name for virtual host.'
+  echo '> You need to include at least 1 argument(name)'
+  echo
+  printf '%-12s' '> Usage: '
+  echo "$(basename ${0}) [name]"
+  printf '%-12s' '> Example: '
+  echo "$(basename ${0}) wordpress"
+  printf '%-12s' '> Example: '
+  echo "$(basename ${0}) magento"
+  printf '%-12s' '> Example: '
+  echo "$(basename ${0}) fox"
+  echo
   exit 1
 fi
 
