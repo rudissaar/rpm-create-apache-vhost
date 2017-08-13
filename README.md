@@ -2,7 +2,7 @@
 
 ### Script is designed to work RPM based operating systems.
 
-Bash script that makes adding new virtual hosts for Apache web server easy.
+Bash script that makes adding new virtual hosts to Apache web server easy.
 Script can me moved to any directory, it doesn't use any relative dependencies and configuration files, but you still can configure script by declaring specific environment variables like:
 
 ---
