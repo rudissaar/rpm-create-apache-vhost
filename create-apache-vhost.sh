@@ -45,7 +45,7 @@ if [[ "${SUB_DOMAIN}" != '' ]]; then
     VHOST_HOST="${VHOST_HOST}.${SUB_DOMAIN}"
 fi
 
-VHOST_HOST="${VHOST_HOST}.dev"
+VHOST_HOST="${VHOST_HOST}.local"
 
 if [[ ! -d "${DOCUMENT_ROOT}/${VHOST_NAME}" ]]; then
     echo '> Creating document root for virtual host.'
