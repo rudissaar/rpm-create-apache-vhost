@@ -59,8 +59,7 @@ cat > "${SERVER_ROOT}/sites-available/${CONF_NAME}" <<EOL
     DocumentRoot ${DOCUMENT_ROOT}/${VHOST_NAME}
 
     ErrorLog /var/log/httpd/${VHOST_NAME}-error.log
-    LogFormat "%h %t \"%r\" %>s \"%{User-agent}i\"" extended
-    CustomLog /var/log/httpd/${VHOST_NAME}-access.log extended
+    CustomLog /var/log/httpd/${VHOST_NAME}-access.log combined
 </VirtualHost>
 EOL
 
